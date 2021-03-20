@@ -1,3 +1,6 @@
+Basic Queries:
+
+
 1) select * from students
 
 
@@ -24,3 +27,33 @@
 7) UPDATE Students 
    SET points = points - 10
    WHERE Name='alex';
+
+
+
+
+Creating Table:
+
+
+*   CREATE TABLE graduuate (
+    ID INTEGER AUTO_INCREMENT primary key NOT NULL,
+    Name varchar(30) NOT NULL UNIQUE,
+	Age INTEGER,
+    Gender varchar(10),
+	Points INTEGER,
+	Graduation date
+    );
+
+
+1)    INSERT INTO graduuate(ID,Name,Age,Gender,Points)
+      SELECT * FROM Students
+      WHERE Name='Layal';
+
+
+ 2)   UPDATE graduuate 
+      SET Graduation = "06-02-2020"
+      WHERE Name='Layal';
+
+
+3)    DELETE FROM Students 
+      WHERE Name='Layal';
+
