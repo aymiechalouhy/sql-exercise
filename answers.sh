@@ -57,3 +57,24 @@ Creating Table:
 3)    DELETE FROM Students 
       WHERE Name='Layal';
 
+
+
+
+Joins
+
+1)    SELECT employees.Name, employees.Company, companies.Date
+      FROM employees
+      INNER JOIN companies ON employees.ID=Companies.ID;
+
+
+2)    SELECT employees.Name
+      FROM employees 
+      INNER JOIN companies
+      ON employees.Company=companies.Name 
+      WHERE companies.Date<2000
+
+3)    SELECT companies.Name
+      FROM companies 
+      INNER JOIN employees
+      ON employees.Company=companies.Name 
+      WHERE employees.Role='Graphic Designer'
